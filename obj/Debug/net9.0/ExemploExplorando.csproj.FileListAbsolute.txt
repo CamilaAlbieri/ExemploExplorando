@@ -1,0 +1,14 @@
+C:\Portifolio\BootCamp.NET\ExemploExplorando\bin\Debug\net9.0\ExemploExplorando.exe
+C:\Portifolio\BootCamp.NET\ExemploExplorando\bin\Debug\net9.0\ExemploExplorando.deps.json
+C:\Portifolio\BootCamp.NET\ExemploExplorando\bin\Debug\net9.0\ExemploExplorando.runtimeconfig.json
+C:\Portifolio\BootCamp.NET\ExemploExplorando\bin\Debug\net9.0\ExemploExplorando.dll
+C:\Portifolio\BootCamp.NET\ExemploExplorando\bin\Debug\net9.0\ExemploExplorando.pdb
+C:\Portifolio\BootCamp.NET\ExemploExplorando\obj\Debug\net9.0\ExemploExplorando.GeneratedMSBuildEditorConfig.editorconfig
+C:\Portifolio\BootCamp.NET\ExemploExplorando\obj\Debug\net9.0\ExemploExplorando.AssemblyInfoInputs.cache
+C:\Portifolio\BootCamp.NET\ExemploExplorando\obj\Debug\net9.0\ExemploExplorando.AssemblyInfo.cs
+C:\Portifolio\BootCamp.NET\ExemploExplorando\obj\Debug\net9.0\ExemploExplorando.csproj.CoreCompileInputs.cache
+C:\Portifolio\BootCamp.NET\ExemploExplorando\obj\Debug\net9.0\ExemploExplorando.dll
+C:\Portifolio\BootCamp.NET\ExemploExplorando\obj\Debug\net9.0\refint\ExemploExplorando.dll
+C:\Portifolio\BootCamp.NET\ExemploExplorando\obj\Debug\net9.0\ExemploExplorando.pdb
+C:\Portifolio\BootCamp.NET\ExemploExplorando\obj\Debug\net9.0\ExemploExplorando.genruntimeconfig.cache
+C:\Portifolio\BootCamp.NET\ExemploExplorando\obj\Debug\net9.0\ref\ExemploExplorando.dll
