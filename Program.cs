@@ -1,18 +1,33 @@
 ﻿using ExemploExplorando.Models;
 using System.Globalization;
 
+// -TUPLA-
+
+(int Id, string Nome, string Sobrenome) tupla = (1, "Camila", "Mattos"); //Declarando uma tupla
+
+//ValueTuple<int, string, string> tuplaValor = (1, "Camila", "Mattos"); //Outra forma de declarar uma tupla
+//var outroExemploTuplaCreate = Tuple.Create(1, "Camila", "Mattos"); //Outra forma de declarar uma tupla
+
+Console.WriteLine($"Id: {tupla.Id}");
+Console.WriteLine($"Nome: {tupla.Nome}");
+Console.WriteLine($"Sobrenome: {tupla.Sobrenome}");
+
+
+
+//_______________________________________________________________
+
 //COLEÇÕES
 
 // -DICTIONARY-
 
-Dictionary<string, string> estados = new Dictionary<string, string>(); //primeiro elemento é a cave e tem que ser único, o segundo é o valor
+// Dictionary<string, string> estados = new Dictionary<string, string>(); //primeiro elemento é a cave e tem que ser único, o segundo é o valor
 
-estados.Add("SP", "São Paulo");
-estados.Add("RJ", "Rio de Janeiro");
-estados.Add("MG", "Minas Gerais");
-estados.Add("BH", "Belo Horizonte");
+// estados.Add("SP", "São Paulo");
+// estados.Add("RJ", "Rio de Janeiro");
+// estados.Add("MG", "Minas Gerais");
+// estados.Add("BH", "Belo Horizonte");
 
-Console.WriteLine(estados["MG"]); //Acessando o valor através da chave
+// Console.WriteLine(estados["MG"]); //Acessando o valor através da chave
 
 // foreach (var item in estados)
 // {
