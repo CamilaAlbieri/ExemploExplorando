@@ -1,14 +1,36 @@
 ﻿using ExemploExplorando.Models;
 using System.Globalization;
 
+// -IF TERNÁRIO-
+
+int num = 10;
+/*
+if (num % 2 == 0)
+{
+    Console.WriteLine($"O numero {num} é par");
+}
+else
+{
+    Console.WriteLine($"O numero {num} é ímpar");
+}
+*/
+
+bool ehPar = num % 2 == 0;
+
+Console.WriteLine($"O número {num} é " + (ehPar ? "par" : "ímpar")); //If ternário, a minha variável ehPar é verdadeira, então retorna "par" | se for falsa, retorna "ímpar"
+
+
+
+
+//_______________________________________________________________
 
 // -DESCONSTRUTOR-
 
-Pessoa p1 = new Pessoa("Camila", "Mattos"); //Chamendo o Construtor
+// Pessoa p1 = new Pessoa("Camila", "Mattos"); //Chamendo o Construtor
 
-(string nome, string sobrenome) = p1; //Chamando o Desconstrutor
+// (string nome, string sobrenome) = p1; //Chamando o Desconstrutor
 
-Console.WriteLine($"{nome} {sobrenome}");  
+// Console.WriteLine($"{nome} {sobrenome}");  
 
 
 
