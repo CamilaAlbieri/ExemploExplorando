@@ -7,10 +7,18 @@ namespace ExemploExplorando.Models
 {
     public class LeituraArquivo
     {
-        public void LerArquivos(string caminho)
+        public (bool Sucesso, string[] Linhas, int QtdLinhas) LerArquivos(string caminho)
         {
-            string[] linhas = File.ReadAllLines(caminho);
+            try
+            {
+                string[] linhas = File.ReadAllLines(caminho);
 
+                return (true, linhas, linhas.Count());
+            }
+            catch (Exception)
+            {
+                return (false, new string[0], 0); //Retorna um array vazio caso ocorra uma excessão
+            }
             
 
         }

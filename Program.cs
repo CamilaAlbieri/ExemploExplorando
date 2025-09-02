@@ -1,16 +1,36 @@
 ﻿using ExemploExplorando.Models;
 using System.Globalization;
+// -TUPLA METÓDOS-
+
+LeituraArquivo arquivo = new LeituraArquivo();
+
+var (sucesso, linhasArquivo, _) = arquivo.LerArquivos("Arquivos/arquivoLeitura.txt"); //Usando _ para ignorar o terceiro valor retornado
+
+if (sucesso)
+{
+    //Console.WriteLine("Quantidade de linhas do arquivo: " + qtdLinhas);
+    foreach (var linha in linhasArquivo)
+    {
+        Console.WriteLine(linha);
+    }
+
+}
+else
+{
+    Console.WriteLine("Não foi possível ler o arquivo");
+}
+
 
 // -TUPLA-
 
-(int Id, string Nome, string Sobrenome) tupla = (1, "Camila", "Mattos"); //Declarando uma tupla
+// (int Id, string Nome, string Sobrenome) tupla = (1, "Camila", "Mattos"); //Declarando uma tupla
 
-//ValueTuple<int, string, string> tuplaValor = (1, "Camila", "Mattos"); //Outra forma de declarar uma tupla
-//var outroExemploTuplaCreate = Tuple.Create(1, "Camila", "Mattos"); //Outra forma de declarar uma tupla
+// //ValueTuple<int, string, string> tuplaValor = (1, "Camila", "Mattos"); //Outra forma de declarar uma tupla
+// //var outroExemploTuplaCreate = Tuple.Create(1, "Camila", "Mattos"); //Outra forma de declarar uma tupla
 
-Console.WriteLine($"Id: {tupla.Id}");
-Console.WriteLine($"Nome: {tupla.Nome}");
-Console.WriteLine($"Sobrenome: {tupla.Sobrenome}");
+// Console.WriteLine($"Id: {tupla.Id}");
+// Console.WriteLine($"Nome: {tupla.Nome}");
+// Console.WriteLine($"Sobrenome: {tupla.Sobrenome}");
 
 
 
