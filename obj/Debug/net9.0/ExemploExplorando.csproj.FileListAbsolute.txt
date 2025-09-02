@@ -12,3 +12,4 @@ C:\Portifolio\BootCamp.NET\ExemploExplorando\obj\Debug\net9.0\refint\ExemploExpl
 C:\Portifolio\BootCamp.NET\ExemploExplorando\obj\Debug\net9.0\ExemploExplorando.pdb
 C:\Portifolio\BootCamp.NET\ExemploExplorando\obj\Debug\net9.0\ExemploExplorando.genruntimeconfig.cache
 C:\Portifolio\BootCamp.NET\ExemploExplorando\obj\Debug\net9.0\ref\ExemploExplorando.dll
+C:\Portifolio\BootCamp.NET\ExemploExplorando\obj\Debug\net9.0\ExemploExplorando.sourcelink.json
