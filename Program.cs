@@ -1,24 +1,38 @@
 ﻿using ExemploExplorando.Models;
 using System.Globalization;
+
+
+// -DESCONSTRUTOR-
+
+Pessoa p1 = new Pessoa("Camila", "Mattos"); //Chamendo o Construtor
+
+(string nome, string sobrenome) = p1; //Chamando o Desconstrutor
+
+Console.WriteLine($"{nome} {sobrenome}");  
+
+
+
+//_______________________________________________________________
+
 // -TUPLA METÓDOS-
 
-LeituraArquivo arquivo = new LeituraArquivo();
+// LeituraArquivo arquivo = new LeituraArquivo();
 
-var (sucesso, linhasArquivo, _) = arquivo.LerArquivos("Arquivos/arquivoLeitura.txt"); //Usando _ para ignorar o terceiro valor retornado
+// var (sucesso, linhasArquivo, _) = arquivo.LerArquivos("Arquivos/arquivoLeitura.txt"); //Usando _ para ignorar o terceiro valor retornado
 
-if (sucesso)
-{
-    //Console.WriteLine("Quantidade de linhas do arquivo: " + qtdLinhas);
-    foreach (var linha in linhasArquivo)
-    {
-        Console.WriteLine(linha);
-    }
+// if (sucesso)
+// {
+//     //Console.WriteLine("Quantidade de linhas do arquivo: " + qtdLinhas);
+//     foreach (var linha in linhasArquivo)
+//     {
+//         Console.WriteLine(linha);
+//     }
 
-}
-else
-{
-    Console.WriteLine("Não foi possível ler o arquivo");
-}
+// }
+// else
+// {
+//     Console.WriteLine("Não foi possível ler o arquivo");
+// }
 
 
 // -TUPLA-

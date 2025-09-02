@@ -16,7 +16,11 @@ namespace ExemploExplorando.Models
             Nome = nome;
             Sobrenome = sobrenome;
         }
-
+        public void Deconstruct (out string nome, out string sobrenome) //Desconstrutor
+        {
+            nome = Nome;
+            sobrenome = Sobrenome;
+        }
 
         private string _nome; //Campo que armazena o nome, o único que consegue modificar esse campo é a própria classe Pessoa
         private int _idade; //Campo que armazena a idade
@@ -36,6 +40,7 @@ namespace ExemploExplorando.Models
             }
 
         }
+        
 
         public string Sobrenome { get; set; }
 
