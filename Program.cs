@@ -1,23 +1,159 @@
 ﻿using ExemploExplorando.Models;
 using System.Globalization;
 
+//COLEÇÕES
+
+// -DICTIONARY-
+
+Dictionary<string, string> estados = new Dictionary<string, string>(); //primeiro elemento é a cave e tem que ser único, o segundo é o valor
+
+estados.Add("SP", "São Paulo");
+estados.Add("RJ", "Rio de Janeiro");
+estados.Add("MG", "Minas Gerais");
+estados.Add("BH", "Belo Horizonte");
+
+Console.WriteLine(estados["MG"]); //Acessando o valor através da chave
+
+// foreach (var item in estados)
+// {
+//     Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+// }
+
+// Console.WriteLine($"\n--------------\n"); //Acessando o valor através da chave
+// //estados.Add("MG", "Minas Gerais"); //Vai gerar uma excessão, pois a chave já existe
+
+// estados.Remove("RJ"); //Remove o item com a chave especificada
+
+// foreach (var item in estados)
+// {
+//     Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+// }
 
 
-//DAteTime com TryParse
+// string chave = "BH";
+// Console.WriteLine($"Verificando o elemento: {chave}");
 
-string dataString = "2024-073-31 15:30";
-//É preferivel usar o TryParse, pois ele tenta converter e não gera uma exceção caso não consiga
-bool sucesso = DateTime.TryParseExact(dataString, "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime dataConvertida);
+// if (estados.ContainsKey(chave))
+// {
+//     Console.WriteLine($"Valor existente: {chave}");
 
-if (sucesso)
+// }
+// else
+// {
+//     Console.WriteLine($"Valor não existe. É seguro adicionar a chave: {chave}");
+// }
+
+
+
+// -PILHA-
+/*
+Stack<int> pilha = new Stack<int>();
+
+pilha.Push(2);
+pilha.Push(4);
+pilha.Push(6);
+pilha.Push(8);
+
+foreach (var item in pilha)
 {
-    Console.WriteLine($"Conversão com sucesso! Data: {dataConvertida}");
+    Console.WriteLine(item);
+}
 
-}
-else
+Console.WriteLine($"\nRemovendo o elemento do topo: {pilha.Pop()} "); //Remove o último item da pilha
+
+pilha.Push(10); //Adiciona um novo item ao topo da pilha
+
+foreach (var item in pilha)
 {
-    Console.WriteLine($"{dataString} não é uma data válida");
+    Console.WriteLine(item);
 }
+
+*/
+
+
+// -LISTAS-
+/*
+Queue<int> fila = new Queue<int>();
+
+fila.Enqueue(2);
+fila.Enqueue(4);
+fila.Enqueue(6);
+fila.Enqueue(8);
+
+foreach (var item in fila)
+{
+    Console.WriteLine(item);
+}
+
+Console.WriteLine($"\nRemovendo o elemento: {fila.Dequeue()} "); //Remove o primeiro item da fila
+
+foreach (var item in fila)
+{
+    Console.WriteLine(item);
+}
+*/
+//_______________________________________________________________
+
+//EXCEÇÕES
+
+//new ExemploExcessao().Metodo1();
+
+/*
+Exceptions: Os recursos de manipulação de exceções do C# permitem que você lide com erros de forma elegante, 
+fornecendo mecanismos para capturar, tratar e responder a situações excepcionais que podem ocorrer durante a execução do programa.
+
+*/
+/*
+try //Tente fazer algo, porém ewtá ciente que algo pode dar errado, acontecer um erro
+{
+    string[] linhas = File.ReadAllLines("Arquivos/d/arquivoLeitura.txt");
+
+    foreach (var linha in linhas)
+    {
+        Console.WriteLine(linha);
+    }
+}
+catch (FileNotFoundException ex)
+{
+    Console.WriteLine($"Ocorreu um erro na leitura do arquivo. Arquivo não encontrado. {ex.Message}");
+}
+catch (DirectoryNotFoundException ex) //Captura a excessão específica de diretório não encontrado
+{
+    Console.WriteLine($"Ocorreu um erro na leitura do arquivo. Caminho da pasta não encontrado. {ex.Message}");
+}
+catch (Exception ex) //Se algo der errado, capture a excessão e faça algo com ela
+{
+    Console.WriteLine($"Ocorreu uma excessão genérica. {ex.Message}");
+}
+finally
+{
+    Console.WriteLine("Chegou no bloco finally");
+    //Bloco opcional, sempre será executado, independente se deu erro ou não
+}
+
+
+*/
+
+
+
+
+//_______________________________________________________________
+
+//DateTime com TryParse
+
+// string dataString = "2024-073-31 15:30";
+// //É preferivel usar o TryParse, pois ele tenta converter e não gera uma exceção caso não consiga
+// bool sucesso = DateTime.TryParseExact(dataString, "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime dataConvertida);
+
+// if (sucesso)
+// {
+//     Console.WriteLine($"Conversão com sucesso! Data: {dataConvertida}");
+
+// }
+// else
+// {
+//     Console.WriteLine($"{dataString} não é uma data válida");
+// }
 
 
 //Console.WriteLine(dataConvertida); //Exibe a data e hora no formato padrão do sistema
@@ -28,6 +164,7 @@ else
 // //Console.WriteLine(data.ToString("dd/MM/yyyy HH:mm")); //Formatação de data e hora
 
 
+//_______________________________________________________________
 
 //Alterando a localização do código
 // CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("pt-BR");
@@ -58,7 +195,7 @@ else
 
 
 
-
+//_______________________________________________________________
 
 
 // Pessoa p1 = new Pessoa("Camila", "Mattos"); //Instanciando a classe Pessoa, criando um objeto do tipo Pessoa
