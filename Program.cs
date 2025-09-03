@@ -2,6 +2,45 @@
 using System.Globalization;
 using Newtonsoft.Json;
 
+// - TIPOS DINÂMICOS -
+
+dynamic variavelDinamica = 4; //Pode mudar o tipo da variável em tempo de execução
+
+Console.WriteLine($"Tipo de variável: {variavelDinamica.GetType()}, Valor: {variavelDinamica} ");
+
+variavelDinamica = "Agora sou uma string hehe";
+
+Console.WriteLine($"Tipo de variável: {variavelDinamica.GetType()}, Valor: {variavelDinamica} ");
+
+variavelDinamica = true;
+
+Console.WriteLine($"Tipo de variável: {variavelDinamica.GetType()}, Valor: {variavelDinamica} ");
+
+
+//_______________________________________________________________
+
+
+// -TIPOS ANÔNIMOS-
+
+// var tipoAnonimo = new { Nome = "Camila", Sobrenome = "Mattos", Altura = 1.80 }; //Criando um tipo anônimo
+
+// Console.WriteLine("Nome: " + tipoAnonimo.Nome);
+// Console.WriteLine("Sobrenome: " + tipoAnonimo.Sobrenome);
+// Console.WriteLine($"Altura: " + tipoAnonimo.Altura + "m");
+
+// string conteudoArquivo = File.ReadAllText("Arquivos/venda.json");
+
+// List<Venda> listaVendas = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
+
+// var listaAnonima = listaVendas.Select(x => new { x.Produto, x.Preco }); //Criando uma lista de tipos anônimos com apenas os campos Produto e Preço
+
+// foreach (var venda in listaAnonima)
+// {
+//     Console.WriteLine($"Produto: {venda.Produto}, Preço: {venda.Preco.ToString("C2")}");
+// }
+
+//_______________________________________________________________
+
 //Tipos especiais de dados | VALOR NULO
 
 // bool? desejaReceberEmail = false; //bool? permite que a variável receba valor nulo
@@ -16,17 +55,17 @@ using Newtonsoft.Json;
 // }
 
 
-string conteudoArquivo = File.ReadAllText("Arquivos/venda.json"); //Lendo o conteúdo do arquivo
+// string conteudoArquivo = File.ReadAllText("Arquivos/venda.json"); //Lendo o conteúdo do arquivo
 
-List<Venda> listaVendas = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo); //Deserializando o conteúdo do arquivo para uma lista de objetos do tipo Venda
+// List<Venda> listaVendas = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo); //Deserializando o conteúdo do arquivo para uma lista de objetos do tipo Venda
 
-foreach (var venda in listaVendas)
-{
-    Console.WriteLine($"Id: {venda.Id}, Produto: {venda.Produto}, " + 
-                      $"Preço: {venda.Preco}, Data da Venda: {venda.DataVenda.ToString("dd/MM/yyyy HH:mm")} " +
-                      s$" {(venda.Desconto.HasValue ? $"Desconto de : {venda.Desconto}" : "" )}"); 
+// foreach (var venda in listaVendas)
+// {
+//     Console.WriteLine($"Id: {venda.Id}, Produto: {venda.Produto}, " + 
+//                       $"Preço: {venda.Preco}, Data da Venda: {venda.DataVenda.ToString("dd/MM/yyyy HH:mm")} " +
+//                       $" {(venda.Desconto.HasValue ? $"Desconto de : {venda.Desconto}" : "" )}"); 
 
-}
+// }
 
 
 
