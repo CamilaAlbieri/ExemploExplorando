@@ -2,19 +2,35 @@
 using System.Globalization;
 using Newtonsoft.Json;
 
+// - CLASSES GENÉRICAS -
+
+MeuArray<int> arrayInteiros = new MeuArray<int>(); //Criando um array genérico do tipo int
+arrayInteiros.AdicionarElemento(10);
+arrayInteiros.AdicionarElemento(20);
+
+Console.WriteLine(arrayInteiros[0]);
+Console.WriteLine(arrayInteiros[1]);
+
+MeuArray<string> arrayStrings = new MeuArray<string>(); //Criando um array genérico do tipo string
+arrayStrings.AdicionarElemento("teste");
+
+Console.WriteLine(arrayStrings[0]);
+
+//_______________________________________________________________
+
 // - TIPOS DINÂMICOS -
 
-dynamic variavelDinamica = 4; //Pode mudar o tipo da variável em tempo de execução
+// dynamic variavelDinamica = 4; //Pode mudar o tipo da variável em tempo de execução
 
-Console.WriteLine($"Tipo de variável: {variavelDinamica.GetType()}, Valor: {variavelDinamica} ");
+// Console.WriteLine($"Tipo de variável: {variavelDinamica.GetType()}, Valor: {variavelDinamica} ");
 
-variavelDinamica = "Agora sou uma string hehe";
+// variavelDinamica = "Agora sou uma string hehe";
 
-Console.WriteLine($"Tipo de variável: {variavelDinamica.GetType()}, Valor: {variavelDinamica} ");
+// Console.WriteLine($"Tipo de variável: {variavelDinamica.GetType()}, Valor: {variavelDinamica} ");
 
-variavelDinamica = true;
+// variavelDinamica = true;
 
-Console.WriteLine($"Tipo de variável: {variavelDinamica.GetType()}, Valor: {variavelDinamica} ");
+// Console.WriteLine($"Tipo de variável: {variavelDinamica.GetType()}, Valor: {variavelDinamica} ");
 
 
 //_______________________________________________________________
