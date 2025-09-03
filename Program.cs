@@ -2,17 +2,42 @@
 using System.Globalization;
 using Newtonsoft.Json;
 
+//Tipos especiais de dados | VALOR NULO
+
+// bool? desejaReceberEmail = false; //bool? permite que a variável receba valor nulo
+
+// if (desejaReceberEmail.HasValue && desejaReceberEmail.Value) //HasValue ou != null: O valor é diferente de nulo?  e o Value: é verdadeiro?
+// {
+//     Console.WriteLine("O usuário optou por receber e-mails");
+// }
+// else
+// {
+//     Console.WriteLine("O usuário não respondeu ou optou por não receber e-mails");
+// }
+
+
+string conteudoArquivo = File.ReadAllText("Arquivos/venda.json"); //Lendo o conteúdo do arquivo
+
+List<Venda> listaVendas = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo); //Deserializando o conteúdo do arquivo para uma lista de objetos do tipo Venda
+
+foreach (var venda in listaVendas)
+{
+    Console.WriteLine($"Id: {venda.Id}, Produto: {venda.Produto}, " + 
+                      $"Preço: {venda.Preco}, Data da Venda: {venda.DataVenda.ToString("dd/MM/yyyy HH:mm")} " +
+                      s$" {(venda.Desconto.HasValue ? $"Desconto de : {venda.Desconto}" : "" )}"); 
+
+}
+
+
+
+//_______________________________________________________________
 
 //Atributos para adicionar Meta Dados
 
 // Caso um dado venha em uma convensão diferente, como por exemplo, um número decimal com vírgula ao invés de ponto, ou um nome com _
 // podemos usar os atributos para mapear esses dados corretamente
 
-
-
-
-
-
+// Exemplo: Na classe Venda, o atributo Produto está mapeado com o JsonProperty para Nome_Produto, que é como está no arquivo JSON
 
 //_______________________________________________________________
 
