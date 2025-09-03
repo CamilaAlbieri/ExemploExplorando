@@ -2,20 +2,39 @@
 using System.Globalization;
 using Newtonsoft.Json;
 
+
+// - DESERIALIZAÇÃO -
+
+// 1º passo: estudar o arquivo, mapear ele em uma classe
+
+string conteudoArquivo = File.ReadAllText("Arquivos/venda.json"); //Lendo o conteúdo do arquivo
+
+List<Venda> listaVendas = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo); //Deserializando o conteúdo do arquivo para uma lista de objetos do tipo Venda
+
+foreach (var venda in listaVendas)
+{
+    Console.WriteLine($"Id: {venda.Id}, Produto: {venda.Produto}, Preço: {venda.Preco}, Data da Venda: {venda.DataVenda.ToString("dd/MM/yyyy HH:mm")}");
+    
+}
+
+//_______________________________________________________________
+
 // - SERIALIZAÇÃO -
-List<Venda> listaVendas = new List<Venda>();
 
-Venda v1 = new Venda(1, "Material de escritório", 25.00M);
-Venda v2 = new Venda(2, "Licensa de Software", 110.00M);
+// DateTime dataAtual = DateTime.Now;
+// List<Venda> listaVendas = new List<Venda>();
 
-listaVendas.Add(v1);
-listaVendas.Add(v2);
+// Venda v1 = new Venda(1, "Material de escritório", 25.00M, dataAtual);
+// Venda v2 = new Venda(2, "Licensa de Software", 110.00M, dataAtual);
 
-string serializado = JsonConvert.SerializeObject(listaVendas, Formatting.Indented); //Serializa o objeto venda1 para uma string em formato JSON
+// listaVendas.Add(v1);
+// listaVendas.Add(v2);
 
-File.WriteAllText("Arquivos/venda.json", serializado); //Escreve o conteúdo serializado em um arquivo
+// string serializado = JsonConvert.SerializeObject(listaVendas, Formatting.Indented); //Serializa o objeto venda1 para uma string em formato JSON
 
-Console.WriteLine(serializado);
+// File.WriteAllText("Arquivos/venda.json", serializado); //Escreve o conteúdo serializado em um arquivo
+
+// Console.WriteLine(serializado);
 
 //_______________________________________________________________
 
