@@ -3,21 +3,33 @@ using System.Globalization;
 using Newtonsoft.Json;
 
 
+//Atributos para adicionar Meta Dados
+
+// Caso um dado venha em uma convensão diferente, como por exemplo, um número decimal com vírgula ao invés de ponto, ou um nome com _
+// podemos usar os atributos para mapear esses dados corretamente
+
+
+
+
+
+
+
+//_______________________________________________________________
+
 // - DESERIALIZAÇÃO -
 
 // 1º passo: estudar o arquivo, mapear ele em uma classe
 
-string conteudoArquivo = File.ReadAllText("Arquivos/venda.json"); //Lendo o conteúdo do arquivo
+// string conteudoArquivo = File.ReadAllText("Arquivos/venda.json"); //Lendo o conteúdo do arquivo
 
-List<Venda> listaVendas = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo); //Deserializando o conteúdo do arquivo para uma lista de objetos do tipo Venda
+// List<Venda> listaVendas = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo); //Deserializando o conteúdo do arquivo para uma lista de objetos do tipo Venda
 
-foreach (var venda in listaVendas)
-{
-    Console.WriteLine($"Id: {venda.Id}, Produto: {venda.Produto}, Preço: {venda.Preco}, Data da Venda: {venda.DataVenda.ToString("dd/MM/yyyy HH:mm")}");
-    
-}
+// foreach (var venda in listaVendas)
+// {
+//     Console.WriteLine($"Id: {venda.Id}, Produto: {venda.Produto}, Preço: {venda.Preco}, Data da Venda: {venda.DataVenda.ToString("dd/MM/yyyy HH:mm")}");
 
-//_______________________________________________________________
+// }
+
 
 // - SERIALIZAÇÃO -
 

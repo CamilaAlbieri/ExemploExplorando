@@ -1,7 +1,7 @@
 [
   {
     "Id": 1,
-    "Produto": "Material de escritório",
+    "Nome_Produto": "Material de escritório",
     "Preco": 25.00,
     "DataVenda": "2025-09-03T15:54:59.5358574-03:00"
   },
