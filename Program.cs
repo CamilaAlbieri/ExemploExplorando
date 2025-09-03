@@ -1,23 +1,35 @@
 ﻿using ExemploExplorando.Models;
 using System.Globalization;
+using Newtonsoft.Json;
+
+// - SERIALIZAÇÃO -
+
+Venda v1 = new Venda(1, "Material de escritório", 25.00M);
+
+string serializado = JsonConvert.SerializeObject(v1, Formatting.Indented); //Serializa o objeto venda1 para uma string em formato JSON
+
+
+Console.WriteLine(serializado);
+
+//_______________________________________________________________
 
 // -IF TERNÁRIO-
 
-int num = 10;
-/*
-if (num % 2 == 0)
-{
-    Console.WriteLine($"O numero {num} é par");
-}
-else
-{
-    Console.WriteLine($"O numero {num} é ímpar");
-}
-*/
+// int num = 10;
+// /*
+// if (num % 2 == 0)
+// {
+//     Console.WriteLine($"O numero {num} é par");
+// }
+// else
+// {
+//     Console.WriteLine($"O numero {num} é ímpar");
+// }
+// */
 
-bool ehPar = num % 2 == 0;
+// bool ehPar = num % 2 == 0;
 
-Console.WriteLine($"O número {num} é " + (ehPar ? "par" : "ímpar")); //If ternário, a minha variável ehPar é verdadeira, então retorna "par" | se for falsa, retorna "ímpar"
+// Console.WriteLine($"O número {num} é " + (ehPar ? "par" : "ímpar")); //If ternário, a minha variável ehPar é verdadeira, então retorna "par" | se for falsa, retorna "ímpar"
 
 
 
